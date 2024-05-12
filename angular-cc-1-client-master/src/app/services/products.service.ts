@@ -34,4 +34,11 @@ export class ProductsService {
   deleteProduct = (url: string): Observable<any> => {
     return this.apiService.delete(url, {});
   };
+
+  // Getting a hotel from the API
+  getHotel = (url: string): Observable<any> => {
+    return this.apiService.get(url, {
+      responseType: 'json',
+    });
+  };
 }

@@ -21,4 +21,5 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./modules/about-us/about-us.module').then((m) => m.AboutUsModule),
   },
+  { path: 'hotels', loadComponent: () => import('./hotel/hotel.component').then((m) => m.HotelComponent), }
 ];

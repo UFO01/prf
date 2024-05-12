@@ -15,7 +15,7 @@
     <nav>
       <ul>
         <li class="aktiv">Kezdőlap<br></li>
-        <li><a routerLink = 'app-'>Szállodák</a><br></li>
+        <li (click)="navigate('/hotels')">Szállodák<br></li>
         <li><!--<a href="">-->Foglalás<!--</a>--><br></li>
         <li><!--<a href="">-->Új szálloda<!--</a>--><br></li>
     </ul>
@@ -23,13 +23,13 @@
 </header>
 <main>
     <div id="reg">
-        <form>
+        <form [formGroup]="signupForm" (ngSubmit)="register()">
             <h1>Űrlap</h1>
             <fieldset>
                 <legend>Regisztráció</legend>
-                <label>Felhasználónév:<br><input type="text" name="username" placeholder="nevergonnagiveyouup" required> </label> <br/><br>
-                <label>Jelszó:<br><input type="password" name="passwd" placeholder="nevergonnaletyoudown" required> </label> <br/><br>
-                <label>Jelszó megerősítése:<br><input type="password" name="passwd" placeholder="nevergonnarunaround" required> </label> <br/><br>
+                <label>Felhasználónév:<br><input formControlName="username" type="text" name="username" placeholder="nevergonnagiveyouup" required> </label> <br/><br>
+                <label>Jelszó:<br><input formControlName="password" type="password" name="passwd" placeholder="nevergonnaletyoudown" required> </label> <br/><br>
+                <label>Jelszó megerősítése:<br><input formControlName="confirmPassword" type="password" name="passwd" placeholder="nevergonnarunaround" required> </label> <br/><br>
                 <label>Captcha: Írd be a hiányzó sort egybe!<br><input type="email" name="email" placeholder="rickrolled" required> </label> <br/><br>
                 <input class="button" type="submit" name="kuld" value="Adatok elküldése">
                 <input class="button" type="reset"/>
