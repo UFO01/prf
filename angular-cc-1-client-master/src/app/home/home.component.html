@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Szlúka András" />
+    <title> ClodBNB </title>
+
+</head>
+<body>
+<header>
+
+    <h1>CloudBNB</h1>
+
+
+    <nav>
+      <ul>
+        <li class="aktiv">Kezdőlap<br></li>
+        <li><a routerLink = 'app-'>Szállodák</a><br></li>
+        <li><!--<a href="">-->Foglalás<!--</a>--><br></li>
+        <li><!--<a href="">-->Új szálloda<!--</a>--><br></li>
+    </ul>
+    </nav>
+</header>
+<main>
+    <div id="reg">
+        <form>
+            <h1>Űrlap</h1>
+            <fieldset>
+                <legend>Regisztráció</legend>
+                <label>Felhasználónév:<br><input type="text" name="username" placeholder="nevergonnagiveyouup" required> </label> <br/><br>
+                <label>Jelszó:<br><input type="password" name="passwd" placeholder="nevergonnaletyoudown" required> </label> <br/><br>
+                <label>Jelszó megerősítése:<br><input type="password" name="passwd" placeholder="nevergonnarunaround" required> </label> <br/><br>
+                <label>Captcha: Írd be a hiányzó sort egybe!<br><input type="email" name="email" placeholder="rickrolled" required> </label> <br/><br>
+                <input class="button" type="submit" name="kuld" value="Adatok elküldése">
+                <input class="button" type="reset"/>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+            <form>
+                <fieldset>
+                    <legend>Bejelentkezés</legend>
+                    <label>Felhasználónév:<br><input type="text" name="username" placeholder="Felhasználónév..." required> </label> <br/><br>
+                    <label>Jelszó:<br><input type="password" name="passwd" placeholder="Jelszó..." required> </label> <br/><br>
+                    <input type="submit" value="Bejelentkezés">
+                </fieldset>
+            </form>
+    </div>
+
+
+
+
+
+
+
+</main>
+<footer> <span></span>Minden jog fenntartva. </footer>
+</body>
+</html>
